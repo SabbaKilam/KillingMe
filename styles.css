@@ -20,6 +20,7 @@ html{
   padding:0;
   width: 100%;
   overflow-x: hidden;
+  user-select: none;
 }
 body{
   margin: 0;
@@ -35,7 +36,13 @@ body{
   top: 0;
   bottom: 0;
 }
+#topBanner{
+  float:left;
+  padding-left: 2%;
+  width: 50%;
+}
 #menuPanel{
+  display: inline-block;
   z-index: 0;
   background: blue;
 }
@@ -43,14 +50,28 @@ body{
   z-index: 1;
   background: white;
   overflow-x: hidden;
-  transition: all 0.5s ease;
+  text-align: center;
+  font-size: 0.5rem;
+  transition: left 0.5s ease;
 }
+/*
 .menu{
   position: absolute;
   padding: 2%;
-  font-size: 1rem;
+
   cursor: pointer;
   user-select: none;
+}
+*/
+#menu{ 
+  font-size: 1rem;
+  cursor: pointer;
+ 
+}
+#title{
+  font-size: 0.5rem;
+  padding-left: 3%;
+
 }
 .menu:hover{
   color: gray;
