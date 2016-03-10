@@ -7,14 +7,18 @@
   Purpose: 
   Note:
   //-----------------
-<body>
-  <div id="menuPanel" class="panel"></div>    
-  <div id="mainPanel" class="panel">
-    <div id="menu" class="menu">&#9776;</div>
-  </div>
-  <div id="splashPanel"></div>
-<script src="main.js" class="panel"></script>        
-</body>  
+  <body>
+    <div id="menuPanel" class="panel"></div>    
+    <div id="mainPanel" class="panel">
+      <div id="topBanner">
+        <span id="menu">&#9776;</span>
+        <span id="title">Title Goes Here</span>
+        <hr>
+      </div>
+    </div>
+    <div id="splashPanel" class="panel"></div>
+  <script src="main.js" class="panel"></script>        
+  </body>  
 */
 /*global lib*/
 /*global jQuery*/
@@ -51,18 +55,29 @@ function runApplication(){
   }
   //---
   function openMenu(){
+    flashRedMenu(0.5);
     _("#mainPanel")
+      .css("transition","left 0.5s ease")
       .css("left",menuGap + "%")
       .css("right",-menuGap + "%")
       //.css("","")
     ;    
   }
   function closeMenu(){
+    flashRedMenu(0.25);    
     _("#mainPanel")
+      .css("transition","left 0s ease")    
       .css("left","0")
       .css("right","0")
       //.css("","")
     ;
+  }
+  //----
+  function flashRedMenu(time){
+    _("#menu").css("color","red");
+    setTimeout(function(){
+      _("#menu").css("color","black");      
+    },1000*time);    
   }
 }
 

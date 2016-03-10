@@ -6,26 +6,38 @@
   Purpose: 
   Note:
   //-----------------
-<body>
-  <div id="menuPanel" class="panel"></div>    
-  <div id="mainPanel" class="panel">
-    <div id="menu" class="menu"></div>
-  </div>
-  <div id="splashPanel"></div>
-<script src="main.js" class="panel"></script>        
-</body>  
+  <body>
+    <div id="menuPanel" class="panel"></div>    
+    <div id="mainPanel" class="panel">
+      <div id="topBanner">
+        <span id="menu">&#9776;</span>
+        <span id="title">Title Goes Here</span>
+        <hr>
+      </div>
+    </div>
+    <div id="splashPanel" class="panel"></div>
+  <script src="main.js" class="panel"></script>        
+  </body>
 =========================*/
 html{
   margin: 0;
   padding:0;
   width: 100%;
-  overflow-x: hidden;
   user-select: none;
 }
 body{
   margin: 0;
   padding:0;
   width: 100%;
+  user-select: none;
+  
+}
+#mobileWrapper{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
   overflow-x: hidden;  
 }
 
@@ -35,16 +47,30 @@ body{
   right: 0;
   top: 0;
   bottom: 0;
+  overflow-x: hidden;
 }
-#topBanner{
-  float:left;
-  padding-left: 2%;
-  width: 50%;
-}
+
 #menuPanel{
   display: inline-block;
   z-index: 0;
   background: blue;
+
+}
+#topBanner{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: left;
+}
+#menu{ 
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer; 
+}
+
+#title{
+  font-size: 0.5rem;
+  padding-left: 20%;
 }
 #mainPanel{
   z-index: 1;
@@ -52,29 +78,9 @@ body{
   overflow-x: hidden;
   text-align: center;
   font-size: 0.5rem;
-  transition: left 0.5s ease;
-}
-/*
-.menu{
-  position: absolute;
-  padding: 2%;
-
-  cursor: pointer;
-  user-select: none;
-}
-*/
-#menu{ 
-  font-size: 1rem;
-  cursor: pointer;
- 
-}
-#title{
-  font-size: 0.5rem;
-  padding-left: 3%;
-
-}
-.menu:hover{
-  color: gray;
+  transition: left 10s ease;
+    overflow-x: hidden;
+  box-shadow: -10px 10px 30px black;    
 }
 #splashPanel{
   z-index: 2;
