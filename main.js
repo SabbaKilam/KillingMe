@@ -24,6 +24,7 @@ $(document).ready(runApplication);
 function runApplication(){
   //===Data===
   var _ = lib;
+  var menuGap = 60;//percentage of opening
   
   //===Driver's Seat===
   initialize();
@@ -49,8 +50,20 @@ function runApplication(){
     _(document.documentElement).css("fontSize", size +"px");
   }
   //---
-  function openMenu(){alert("opening menu");}
-  function closeMenu(){alert("closing menu");}
+  function openMenu(){
+    _("#mainPanel")
+      .css("left",menuGap + "%")
+      .css("right",-menuGap + "%")
+      //.css("","")
+    ;    
+  }
+  function closeMenu(){
+    _("#mainPanel")
+      .css("left","0")
+      .css("right","0")
+      //.css("","")
+    ;
+  }
 }
 
 

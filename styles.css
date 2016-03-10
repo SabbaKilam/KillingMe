@@ -37,11 +37,12 @@ body{
 }
 #menuPanel{
   z-index: 0;
-  background: red;
+  background: blue;
 }
 #mainPanel{
   z-index: 1;
   background: white;
+  overflow-x: hidden;
   transition: all 0.5s ease;
 }
 .menu{
@@ -49,10 +50,14 @@ body{
   padding: 2%;
   font-size: 1rem;
   cursor: pointer;
+  user-select: none;
+}
+.menu:hover{
+  color: gray;
 }
 #splashPanel{
   z-index: 2;
-  background: blue;
+  background: red;
   opacity: 1;
   visibility: visible;
   transition: all 3.5s linear;
