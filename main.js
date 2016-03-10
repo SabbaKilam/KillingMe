@@ -50,6 +50,11 @@ function runApplication(){
 
   }//===END initialize()===
   function adjustRootEm(){
+    //delay an introductory meu flash
+    setTimeout(function(){
+      flashRedMenu(0.5);      
+    },5000);
+
     var size = 35 + window.innerWidth/64;
     _(document.documentElement).css("fontSize", size +"px");
   }
