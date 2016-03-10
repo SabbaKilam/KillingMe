@@ -1,0 +1,73 @@
+/*========================
+  Author: Abbas Abdulmalik
+  Creation Date: March 10, 2016
+  Title: KillingMe
+  Revised: 
+  Purpose: 
+  Note:
+  //-----------------
+<body>
+  <div id="menuPanel" class="panel"></div>    
+  <div id="mainPanel" class="panel">
+    <div id="menu" class="menu"></div>
+  </div>
+  <div id="splashPanel"></div>
+<script src="main.js" class="panel"></script>        
+</body>  
+=========================*/
+html{
+  margin: 0;
+  padding:0;
+  width: 100%;
+  overflow-x: hidden;
+}
+body{
+  margin: 0;
+  padding:0;
+  width: 100%;
+  overflow-x: hidden;  
+}
+
+.panel{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#menuPanel{
+  z-index: 0;
+  background: red;
+}
+#mainPanel{
+  z-index: 1;
+  background: white;
+  transition: all 0.5s ease;
+}
+.menu{
+  position: absolute;
+  padding: 2%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#splashPanel{
+  z-index: 2;
+  background: blue;
+  opacity: 1;
+  visibility: visible;
+  transition: all 3.5s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
